@@ -2,7 +2,7 @@ name: Docker Image CI
 on: [push]
 jobs:
   build:
-    runs-on: [self-hosted, linux]
+    runs-on: ubuntu
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
@@ -12,3 +12,4 @@ jobs:
         image-reference: "localbuild/testimage:latest"
         dockerfile-path: "Dockerfile"
         fail-build: true
+        debug: true
