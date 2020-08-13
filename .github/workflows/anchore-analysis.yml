@@ -25,6 +25,11 @@ jobs:
         dockerfile-path: "Dockerfile"
         acs-report-enable: true
         debug: true
+    - name: debugging step
+      run: ls -al
+      run: pwd
+      run: ls -al anchore-reports
+      run: find .
     - name: Upload Anchore Scan Report
       uses: github/codeql-action/upload-sarif@v1
       with:
