@@ -23,8 +23,6 @@ jobs:
       with:
         image: "localbuild/testimage:latest"
         acs-report-enable: true
-        debug: true
-     run: find . -name package.json
     - name: debugging step
       run: ls -al; pwd; ls -al anchore-reports; find .
     - name: Upload Anchore Scan Report
